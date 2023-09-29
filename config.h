@@ -10,13 +10,13 @@ static const char unknown_str[] = "n/a";
 #define MAXLEN 2048
 
 static const struct arg args[] = {
-	/* function format          argument */
-	{ battery_remaining, "^b#004b72^^c#d4d4d4^ %s ^d^", "BAT1" },
-	{ battery_perc, "^b#1c5e8a^^c#d4d4d4^ POWER: %s%% ^d^", "BAT1" },
-	/* { run_command, "^b#3072a3^^c#d4d4d4^ %s ^d^", "sh ~/bin/volinfo" }, */
-	{ vol_perc, "^b#3072a3^^c#d4d4d4^ %s ^d^", "sh ~/bin/volinfo" },
-	{ ram_perc, "^b#4387bc^^c#d4d4d4^  %s%% ^d^", NULL },
-	{ datetime, "^b#569cd6^^c#f7f7f7^  %s ", "%a %d %b  %I:%M %p" },
+	/* function format      f7f7f7    argument */
+	{ battery_remaining, "^b#93B7BE^^c#000000^ %s ^d^", "BAT1" },
+        { wifi_essid, "^b#F1FFFA^^c#000000^ 󰤨 %s ^d^", "wlo1" },
+	{ battery_perc, "^b#D5C7BC^^c#000000^ 󰁹 %s%% ^d^", "BAT1" },
+	{ run_command, "^b#A79090^^c#f7f7f7^ 󰋋 %s ^d^", "sh ~/bin/volinfo" },
+	{ run_command, "^b#785964^^c#f7f7f7^ %s ^d^", "sh ~/bin/get_current_layout.sh" },
+	{ datetime, "^b#454545^^c#f7f7f7^  %s ", "%a %d %b  %I:%M %p" },
 };
 /*
  * function            description                     argument (example)
