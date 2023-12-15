@@ -9,14 +9,26 @@ static const char unknown_str[] = "n/a";
 /* maximum output string length */
 #define MAXLEN 2048
 
+/* #f7f7f7 */
+/* #000000 */
+
+// static const struct arg args[] = {
+// 	/* function format      f7f7f7    argument */
+// 	{ battery_remaining, "^b#3b4252^^c#f7f7f7^ %s ^d^", "BAT1" },
+//         { wifi_essid, "^b#3b4252 ^^c#f7f7f7^ 󰤨 %s ^d^", "wlo1" },
+// 	{ battery_perc, "^b#3b4252 0^^c#f7f7f7^ 󰁹 %s%% ^d^", "BAT1" },
+// 	{ run_command, "^b#434c5e ^^c#f7f7f7^ 󰋋 %s ^d^", "sh ~/bin/volinfo" },
+// 	{ run_command, "^b#4c566a ^^c#f7f7f7^ %s ^d^", "sh ~/bin/get_current_layout.sh" },
+// 	{ datetime, "^b#3b4252 ^^c#f7f7f7^  %s ", "%a %d %b  %I:%M %p" },
+// };
 static const struct arg args[] = {
 	/* function format      f7f7f7    argument */
-	{ battery_remaining, "^b#1e1e1e^^c#f7f7f7^ %s ^d^", "BAT1" },
-        { wifi_essid, "^b#564E58^^c#f7f7f7^ 󰤨 %s ^d^", "wlo1" },
-	{ battery_perc, "^b#904E55^^c#f7f7f7^ 󰁹 %s%% ^d^", "BAT1" },
-	{ run_command, "^b#F2EFE9^^c#000000^ 󰋋 %s ^d^", "sh ~/bin/volinfo" },
-	{ run_command, "^b#8C8B88^^c#000000^ %s ^d^", "sh ~/bin/get_current_layout.sh" },
-	{ datetime, "^b#252627^^c#f7f7f7^  %s ", "%a %d %b  %I:%M %p" },
+	{ battery_remaining, "^c#f7f7f7^%s | ", "BAT1" },
+        { wifi_essid, "󰤨 %s | ", "wlo1" },
+	{ battery_perc, "󰁹 %s% | ", "BAT1" },
+	{ run_command, "󰋋 %s | ", "sh ~/bin/volinfo" },
+	{ run_command, "%s | ", "sh ~/bin/get_current_layout.sh" },
+	{ datetime, " %s", "%a %d %b  %I:%M %p" },
 };
 /*
  * function            description                     argument (example)
