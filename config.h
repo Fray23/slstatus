@@ -20,13 +20,14 @@ static const struct arg args[] = {
         // // { datetime, "^b#252627^^c#f7f7f7^  %s ", "%a %d %b  %I:%M %p" },
         // { datetime, "^b#252627^^c#f7f7f7^  %s ", "%a %d %b  %H:%M %p" },
 
-        { battery_remaining, "^c#f7f7f7^[ %s ]", "BAT1" },
-        { wifi_essid, "[ 󰤨 %s ]", "wlo1" },
-	{ battery_perc, "[ 󰁹 %s ]", "BAT1" },
-	{ run_command, "[ %s ]", "sh ~/bin/volinfo" },
-	{ run_command, "[ %s ]", "sh ~/bin/get_current_layout.sh" },
-        // { datetime, "^b#252627^^c#f7f7f7^  %s ", "%a %d %b  %I:%M %p" },
-        { datetime, "[  %s ] ", "%a %d %b  %H:%M %p" },
+        { battery_remaining, "^c#FAF3DD^%s ", "BAT1" },
+        { wifi_essid, "/ 󰤨 %s ", "wlo1" },
+	{ battery_perc, "/ 󰁹 %s ", "BAT1" },
+	{ run_command, "/  %s ", "sh ~/bin/temp.sh" },
+	{ run_command, "/ %s ", "sh ~/bin/volinfo" },
+	{ run_command, "/ [%s] ", "sh ~/bin/get_current_layout.sh" },
+        { datetime, "/  %s ", "%a %d %b" },
+        { datetime, "/   %s  ", "%H:%M %p" },
 };
 /*
  * function            description                     argument (example)
